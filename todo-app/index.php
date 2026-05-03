@@ -1,7 +1,5 @@
 <?php include 'koneksi.php'; ?>
 
-
-
 <?php
 $total = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as t FROM todos"))['t'];
 $done = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as t FROM todos WHERE status='done'"))['t'];
