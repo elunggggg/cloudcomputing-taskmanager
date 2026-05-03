@@ -1,6 +1,5 @@
 <?php include 'koneksi.php'; ?>
 
-KANYUT
 
 <?php
 $total = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as t FROM todos"))['t'];
