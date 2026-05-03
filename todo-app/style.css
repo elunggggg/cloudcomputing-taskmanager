@@ -1,219 +1,168 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ================= BODY ================= */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #f8fafc);
-    color: #1e293b;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    color: #333;
 }
 
-/* ================= CONTAINER ================= */
 .container {
-    max-width: 1100px;
+    width: 90%;
     margin: auto;
-    padding: 30px;
+    padding: 30px 0;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    color: white;
 }
 
-.topbar h1 {
-    font-size: 26px;
-    font-weight: 600;
-}
-
-/* ================= BUTTON ================= */
-.btn {
-    padding: 8px 14px;
-    border-radius: 10px;
+.subtitle {
     font-size: 14px;
+    opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+    background: white;
+    color: #764ba2;
+    padding: 10px 18px;
+    border-radius: 30px;
     text-decoration: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-}
-
-.btn-primary { background: #4f46e5; color: white; }
-.btn-success { background: #22c55e; color: white; }
-.btn-danger  { background: #ef4444; color: white; }
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-/* ================= CARD ================= */
-.card {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    margin-bottom: 20px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-2px);
+.btn:hover {
+    transform: scale(1.05);
 }
 
-/* ================= STATS ================= */
+/* PROGRESS */
+.progress-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+    color: white;
+}
+
+.progress-bar-wrap {
+    background: rgba(255,255,255,0.2);
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #00f2fe;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+/* STATS */
 .stats {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-.stat-box {
+.stat {
     flex: 1;
-    padding: 18px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #6366f1, #818cf8);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
     color: white;
     transition: 0.3s;
 }
 
-.stat-box:nth-child(2) {
-    background: linear-gradient(135deg, #22c55e, #4ade80);
+.stat:hover {
+    transform: translateY(-5px);
 }
 
-.stat-box:nth-child(3) {
-    background: linear-gradient(135deg, #f59e0b, #fbbf24);
-}
+.total { background: #4facfe; }
+.done { background: #43e97b; }
+.pending { background: #fa709a; }
 
-.stat-box:hover {
-    transform: scale(1.03);
-}
-
-.stat-box h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-}
-
-.stat-box p {
-    font-size: 13px;
-    opacity: 0.9;
-}
-
-/* ================= SEARCH ================= */
-.search input {
+/* SEARCH */
+.search-box input {
     width: 100%;
-    padding: 11px;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-    transition: 0.2s;
-}
-
-.search input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
-}
-
-/* ================= TABLE ================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    text-align: left;
-    padding: 14px;
-    font-size: 13px;
-    background: #f1f5f9;
-    color: #64748b;
-}
-
-td {
-    padding: 14px;
-    border-bottom: 1px solid #f1f5f9;
-    vertical-align: top;
-}
-
-tr {
-    transition: 0.2s;
-}
-
-tr:hover {
-    background: #f8fafc;
-    transform: scale(1.002);
-}
-
-/* ================= STATUS ================= */
-.status {
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.pending {
-    background: #fef3c7;
-    color: #92400e;
-}
-
-.done {
-    background: #dcfce7;
-    color: #166534;
-}
-
-/* ================= DESC ================= */
-.desc {
-    max-width: 350px;
-    white-space: normal;
-    word-wrap: break-word;
-    line-height: 1.5;
-}
-
-/* ================= ACTION ================= */
-.action {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-/* ================= FORM ================= */
-.form-group {
-    margin-bottom: 15px;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 11px;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
-    transition: 0.2s;
-}
-
-input:focus, textarea:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
     outline: none;
+    margin-bottom: 20px;
 }
 
-/* ================= BACK ================= */
-.back {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #4f46e5;
+/* TASK LIST */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.task-item:hover {
+    transform: scale(1.02);
+}
+
+/* CONTENT */
+.task-content h4 {
+    margin: 0;
+}
+
+.task-content p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* RIGHT */
+.task-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* BADGE */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.badge.done { background: #2ecc71; }
+.badge.pending { background: #e67e22; }
+
+/* ACTION */
+.actions a {
     text-decoration: none;
+    font-size: 18px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-    }
+.task-item form input,
+.task-item form textarea,
+.task-item form select {
+    background: #f8f9ff;
+    transition: 0.2s;
+}
 
-    table {
-        font-size: 13px;
-    }
+.task-item form input:focus,
+.task-item form textarea:focus,
+.task-item form select:focus {
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(118,75,162,0.2);
 }
